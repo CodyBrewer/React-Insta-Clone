@@ -1,0 +1,26 @@
+h1 {
+    font-family: 'Satisfy', cursive;
+}
+
+.icon-search{
+    position: absolute;
+    color: #999999;
+
+}
+
+#search-input::placeholder{
+    text-align: center;
+    color: #999999;
+}
+
+.searchbar-container{
+    display: flex;
+    justify-content: space-around;
+    .searchbar-logo{
+        display: flex;
+    }
+    .searchbar-user-icons{
+        display: flex;
+        color: #393939;
+    }
+}
