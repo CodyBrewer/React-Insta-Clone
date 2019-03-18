@@ -1,7 +1,8 @@
 import React from 'react';
 import './SearchBar.scss';
-import { Instagram, Compass, Heart, User} from 'react-feather';
+import { Instagram} from 'react-feather';
 import SearchForm from './SearchForm';
+import SearchBarIcons from './SearchBarIcons';
 
 
 const SearchBar = props => {
@@ -13,11 +14,7 @@ const SearchBar = props => {
                 <h1>Instagram</h1>
             </div>
             <SearchForm />
-            <div className="searchbar-user-icons">
-                <Compass />
-                <Heart />
-                <User />
-            </div>
+            <SearchBarIcons />
         </div>
     )
 }
