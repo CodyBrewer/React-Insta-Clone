@@ -39,7 +39,9 @@ class Login extends Component{
                         onChange = {this.inputChangeHandler}    
                     />
                 </FormGroup>
-                <Button color="primary" size="medium" onClick={this.loginSubmitHandler}>
+                <Button color="primary"
+                    size="medium"
+                    onClick={this.loginSubmitHandler}>
                     Login
                 </Button>
             </Form>
