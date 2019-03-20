@@ -1,57 +1,58 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Comment from './Comment';
-import CommentInput from './CommentInput';
+import React from "react";
+import PropTypes from "prop-types";
+import Comment from "./Comment";
+import CommentInput from "./CommentInput";
 
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       comments: props.comments,
-      comment: '',
+      comment: "",
       commentId: props.comments.id
     };
   }
-  componentDidMount(){
+  componentDidMount() {
     const id = this.commentid;
-    if(localStorage.getItem(id)){
+    if (localStorage.getItem(id)) {
       this.setState({
         comments: JSON.parse(localStorage.getItem(this.commentId))
       });
     } else {
-      this.commentSetter()
+      this.commentSetter();
     }
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.commentSetter();
   }
 
   commentSetter = () => {
-    localStorage.setItem(
-      this.commentId,
-      JSON.stringify(this.state.comments)
-    );
+    localStorage.setItem(this.commentId, JSON.stringify(this.state.comments));
   };
-
 
   commentSubmitHandler = e => {
     e.preventDefault();
-    const newComment = {text: this.state.comment, username: localStorage.getItem('user')}
+    const newComment = {
+      text: this.state.comment,
+      username: localStorage.getItem("user")
+    };
     const comments = this.state.comments.slice();
     comments.push(newComment);
-    this.setState({comments, comment: ''});
-  }
+    this.setState({ comments, comment: "" });
+  };
   commentHandler = e => {
-    this.setState({comment: e.target.value})
-  }
+    this.setState({ comment: e.target.value });
+  };
   render() {
     return (
       <div>
-        {this.state.comments.map((comment, commentId) => <Comment key={commentId} comment={comment} />)}
-        <CommentInput 
+        {this.state.comments.map((comment, commentId) => (
+          <Comment key={commentId} comment={comment} />
+        ))}
+        <CommentInput
           comment={this.state.comment}
           commentSubmitHandler={this.commentSubmitHandler}
-          commentHandler = {this.commentHandler}
+          commentHandler={this.commentHandler}
         />
       </div>
     );

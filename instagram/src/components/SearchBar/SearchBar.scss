@@ -1,29 +1,28 @@
 h1 {
-    font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
 }
 
-.icon-search{
-    position: absolute;
-    color: #999999;
-
+.icon-search {
+  position: absolute;
+  color: #999999;
 }
 
-#search-input::placeholder{
-    text-align: center;
-    color: #999999;
+#search-input::placeholder {
+  text-align: center;
+  color: #999999;
 }
 
-.searchbar-container{
+.searchbar-container {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #d3d3d3;
+  margin: 15px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  .searchbar-logo {
     display: flex;
-    justify-content: space-around;
-    border: 1px solid #d3d3d3;
-    margin: 15px 0;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    .searchbar-logo{
-        display: flex;
-    }
-    .searchbar-user-icons{
-        display: flex;
-        color: #393939;
-    }
+  }
+  .searchbar-user-icons {
+    display: flex;
+    color: #393939;
+  }
 }
