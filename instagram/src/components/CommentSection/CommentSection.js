@@ -41,14 +41,17 @@ class CommentSection extends React.Component {
     comments.push(newComment);
     this.setState({comments, comment: ''});
   }
-
+  commentHandler = e => {
+    this.setState({comment: e.target.value})
+  }
   render() {
     return (
       <div>
-        {this.state.comments.map((comment, key) => <Comment key={this.commentId} comment={comment} />)}
+        {this.state.comments.map((comment, commentId) => <Comment key={commentId} comment={comment} />)}
         <CommentInput 
           comment={this.state.comment}
-          submitComment={this.commentSubmitHandler}
+          commentSubmitHandler={this.commentSubmitHandler}
+          commentHandler = {this.commentHandler}
         />
       </div>
     );
