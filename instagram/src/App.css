@@ -46,12 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
-
-
-
+/* After Meyer Reset */
 body{
     font-size: 62.5%;
     width: 800px;
