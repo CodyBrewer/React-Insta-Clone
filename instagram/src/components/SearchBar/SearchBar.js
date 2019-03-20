@@ -13,7 +13,7 @@ const SearchBar = props => {
                 <span>|</span>
                 <h1>Instagram</h1>
             </div>
-            <SearchForm />
+            <SearchForm searchPosts={props.searchPosts}/>
             <SearchBarIcons />
         </div>
     )

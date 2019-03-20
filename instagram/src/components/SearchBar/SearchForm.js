@@ -8,7 +8,7 @@ const SearchForm = props => {
             <InputGroup>
             <InputGroupAddon addonType="append">
                     <Search className="icon-search"/>
-                <Input placeholder="Search" id="search-input"/>
+                <Input placeholder="Search" id="search-input" onKeyDown={props.searchPosts}/>
                 </InputGroupAddon>
             </InputGroup>
         </div>

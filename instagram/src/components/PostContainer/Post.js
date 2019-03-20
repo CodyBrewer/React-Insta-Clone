@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader';
 import {Heart, MessageCircle} from 'react-feather';
 import './PostContainer.scss';
+import PropTypes from 'prop-types';
 
 const Post = props => {
   return (

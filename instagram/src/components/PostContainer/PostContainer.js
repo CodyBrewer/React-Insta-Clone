@@ -5,7 +5,7 @@ import './PostContainer.scss';
 const PostContainer = props => {
   return (
     <div className="posts-container">
-      {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
+      {props.posts.map(post => <Post key={post.id} post={post} />)}
     </div>
   );
 };
