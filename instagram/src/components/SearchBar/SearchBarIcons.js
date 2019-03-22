@@ -7,7 +7,7 @@ const SearchBarIcons = props => {
     <div className="searchbar-user-icons">
       <Compass />
       <Heart />
-      <User />
+      <User onClick={props.logOut}/>
     </div>
   );
 };
