@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       comment: "",
-      commentId: props.comments.id
+      commentId: this.props.commentID
     };
   }
   componentDidMount() {
@@ -46,8 +46,8 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        {this.state.comments.map((comment, commentId) => (
-          <Comment key={commentId} comment={comment} />
+        {this.state.comments.map((comment, index) => (
+          <Comment key={index} comment={comment} />
         ))}
         <CommentInput
           comment={this.state.comment}
