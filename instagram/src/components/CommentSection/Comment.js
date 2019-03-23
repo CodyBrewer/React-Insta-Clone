@@ -5,7 +5,7 @@ import "./CommentSection.scss";
 const Comment = props => {
   return (
     <div className="comment-text">
-      <span className="user">{props.comment.username}</span>{" "}
+      <div className="user">{props.comment.username}</div>{" "}
       <span className="comment">{props.comment.text}</span>
     </div>
   );
