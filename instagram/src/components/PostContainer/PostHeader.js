@@ -1,5 +1,4 @@
 import React from "react";
-import "./PostContainer.scss";
 import styled from 'styled-components';
 import Username from '../Styles/Reusable';
 
