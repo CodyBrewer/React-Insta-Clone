@@ -1,13 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./CommentSection.scss";
+import styled from 'styled-components';
+import Username from '../Styles/Reusable';
+
+const CommentContainer = styled.div`
+  text-align: left;
+  padding: 2px;
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+`
+const CommentText = styled.div`
+  margin: 5px;
+  font-weight: 300;
+  font-size: 14px;
+`
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      <div className="user">{props.comment.username}</div>{" "}
-      <span className="comment">{props.comment.text}</span>
-    </div>
+    <CommentContainer>
+      <Username>{props.comment.username}&nbsp;</Username>
+      <CommentText>{props.comment.text}</CommentText>
+    </CommentContainer>
   );
 };
 
