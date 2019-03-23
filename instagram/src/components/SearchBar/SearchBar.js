@@ -17,6 +17,7 @@ const LogoHeader = styled.div`
   display: flex;
   line-height: 75px;
   align-items: center;
+  padding: 5px 5px;
 `;
 
 const Divider = styled.span`
