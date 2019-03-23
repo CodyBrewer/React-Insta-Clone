@@ -6,6 +6,7 @@ import Username from '../Styles/Reusable';
 const PostsHeader = styled.div`
   display: flex;
   margin-left: 10px;
+  height: 60px;
 `
 const PostThumbnail = styled.div`
   height: 50px;
@@ -13,7 +14,9 @@ const PostThumbnail = styled.div`
 `
 
 const UserImage = styled.img`
+  height: 100%;
   border-radius: 50%;
+  margin: 5px auto;
 `
 
 
