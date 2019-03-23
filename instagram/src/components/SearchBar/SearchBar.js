@@ -5,6 +5,7 @@ import SearchBarIcons from "./SearchBarIcons";
 import styled from "styled-components";
 import { Instagram } from "styled-icons/icomoon/Instagram";
 
+
 const Header = styled.header`
 width: 100%;
 display: flex;
@@ -37,6 +38,8 @@ class SearchBar extends Component{
   constructor(props){
     super(props);
   }
+
+  
 
   logOut = () => {
     localStorage.clear();
