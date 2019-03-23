@@ -1,17 +1,34 @@
 import React from 'react';
-import { Heart, MessageCircle } from "react-feather";
+import styled from 'styled-components';
+import { Heart, MessageCircle } from "styled-icons/feather";
 
+const LikesContainer = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto 3%;
+`
+
+const LikeIcons = styled.div`
+    margin-left: 5% 5%;
+    svg{
+        height: 30px;
+    }
+`
+const Likes = styled.h3`
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+`
 const LikeSection = props =>{
     return(
-        <div className="like-section">
-            <div className="like-icons">
+        <LikesContainer>
+            <LikeIcons>
                 <Heart onClick={props.likeIncrement} />
                 <MessageCircle />
-            </div>
-            <div className="likes">
-                {props.likes}
-            </div>
-        </div>
+            </LikeIcons>
+            <Likes>
+                Likes: {props.likes}
+            </Likes>
+        </LikesContainer>
     )
 }
 
