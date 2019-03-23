@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import "./SearchBar.scss";
 import SearchForm from "./SearchForm";
 import SearchBarIcons from "./SearchBarIcons";
 import styled from "styled-components";
@@ -11,7 +10,6 @@ width: 100%;
 display: flex;
 justify-content: space-around;
 border: 1px solid #d3d3d3;
-margin: 15px 0;
 box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 `
 const LogoHeader = styled.div`
